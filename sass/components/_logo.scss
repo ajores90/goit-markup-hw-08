@@ -1,0 +1,21 @@
+.header-logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  padding: 25px 0;
+  margin-right: 93px;
+}
+
+.header-logo__web {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  color: $color-accent;
+}
+
+.header-logo__studio {
+  color: $color-black;
+  font-family: 'Raleway', sans-serif;
+}
