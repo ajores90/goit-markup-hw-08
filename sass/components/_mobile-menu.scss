@@ -4,13 +4,17 @@
   left: 0;
   display: none;
   width: 100%;
-  height: 500px;
+  height: 100%;
   background-color: $color-white;
 
   &__container {
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
+    height: 100%;
     padding: 48px 40px;
+
     @media screen and (min-width: $mobile) {
       width: $mobile;
     }
@@ -18,7 +22,6 @@
 
   &.is-open {
     display: block;
-    
   }
 
   &__close-button {
@@ -41,11 +44,11 @@
   &__nav {
     display: flex;
     flex-direction: column;
+    margin-bottom: auto;
   }
 
   &__list {
-    margin-top: auto;
-    margin-bottom: 300px;
+    margin: 0;
     padding: 0;
   }
 
@@ -79,10 +82,9 @@
     }
   }
   &__contacts {
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: 0;
+    margin-bottom: 64px;
     padding: 0;
-    list-style-type: none;
   }
   &__tel {
     font-weight: 500;
@@ -90,7 +92,7 @@
     line-height: 1.15;
     letter-spacing: 0.02em;
     color: $color-accent;
-    list-style-type: none;
+    text-decoration: none;
   }
 
   &__mail {
@@ -99,9 +101,29 @@
     line-height: 1.15;
     letter-spacing: 0.02em;
     color: $color-text;
+    text-decoration: none;
+  }
+}
+
+.socials {
+  display: flex;
+  padding: 0;
+  margin: 0;
+
+  &__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: $color-accent;
   }
 
-  &__socials {
-    display: flex;
+  &__line {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }

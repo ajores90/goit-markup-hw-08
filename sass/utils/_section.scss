@@ -1,9 +1,17 @@
 .section {
   padding: 94px 0;
+
+  @media screen and (max-width: $desktop) {
+    padding: 60px 0;
+  }
 }
 
 .service {
   padding-top: 0;
+
+  @media screen and (max-width: $desktop) {
+    display: none;
+  }
 }
 
 .squad {
