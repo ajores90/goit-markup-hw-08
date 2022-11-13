@@ -17,23 +17,17 @@
   <body>
     <header class="header">
       <div class="container">
-        <div class="header__container js-menu-container">
-          <button
-            type="button"
-            class="mobile-menu js-open-menu"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-          >
-            <svg width="40px" height="40px" aria-label="mobile menu switch">
-              <use class="icon-close" href="./icons.svg#icon-close_40px"></use>
-              <use class="icon-menu" href="./icons.svg#icon-menu_40px"></use>
-            </svg>
-          </button>
+        <div class="header__container">
           <nav class="navigation">
             <a href="./index.html" lang="en" class="header-logo">
               <span class="header-logo__web">Web</span
               ><span class="header-logo__studio">Studio</span></a
             >
+            <button type="button" class="burger-menu js-open-menu">
+              <svg width="40px" height="40px" aria-label="mobile menu switch">
+                <use class="mobile-menu__icon-open" href="./icons.svg#icon-menu_40px"></use>
+              </svg>
+            </button>
             <ul class="navigation__menu">
               <li class="navigation__item">
                 <a class="navigation__link navigation__link--current" href="./index.html">Студія</a>
@@ -435,6 +429,49 @@
         </div>
       </div>
     </footer>
+
+    <div class="mobile-menu js-menu-container">
+      <div class="mobile-menu__container">
+        <button type="button" class="mobile-menu__close-button js-close-menu">
+          <svg width="40px" height="40px">
+            <use class="mobile-menu__icon-close" href="./icons.svg#icon-close_40px"></use>
+          </svg>
+        </button>
+        <nav class="mobile-menu__nav">
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link mobile-menu__link--current" href="./index.html">Студія</a>
+            </li>
+
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="./portfolio.html">Портфоліо</a>
+            </li>
+
+            <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Контакти</a></li>
+          </ul>
+          <ul class="mobile-menu__contacts">
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__tel" href="tel:+380961111111">
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__mail" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+
+            
+          </ul>
+          <ul class="mobile-menu__socials">
+            <li class="mobile-menu__item"><a class="mobile-menu__soc" href="#">Instagram</a></li>
+            <li class="mobile-menu__item"><a class="mobile-menu__soc" href="#">Twitter</a></li>
+            <li class="mobile-menu__item"><a class="mobile-menu__soc" href="#">Facebook</a></li>
+            <li class="mobile-menu__item"><a class="mobile-menu__soc" href="#">Linkedin</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <h2 class="modal__title">Залиште свої дані, ми вам передзвонимо</h2>

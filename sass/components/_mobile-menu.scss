@@ -1,0 +1,107 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 500px;
+  background-color: $color-white;
+
+  &__container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 48px 40px;
+    @media screen and (min-width: $mobile) {
+      width: $mobile;
+    }
+  }
+
+  &.is-open {
+    display: block;
+    
+  }
+
+  &__close-button {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    &:hover,
+    &:focus {
+      fill: $color-accent;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list {
+    margin-top: auto;
+    margin-bottom: 300px;
+    padding: 0;
+  }
+
+  &__item:not(:last-child) {
+    padding-bottom: 32px;
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+
+    color: $color-title;
+    text-decoration: none;
+    transition: color 250ms $transition-effect;
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
+    }
+    &--current {
+      color: $color-accent;
+      transition: color 250ms $transition-effect;
+      left: 0;
+
+      &:hover,
+      &:focus {
+        color: $color-title;
+      }
+    }
+  }
+  &__contacts {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0;
+    list-style-type: none;
+  }
+  &__tel {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    color: $color-accent;
+    list-style-type: none;
+  }
+
+  &__mail {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    color: $color-text;
+  }
+
+  &__socials {
+    display: flex;
+  }
+}

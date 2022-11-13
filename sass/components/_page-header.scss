@@ -10,10 +10,6 @@
 .header__container {
   display: flex;
   align-items: center;
-
-  // @media screen and(max-width:$tablet) {
-  //   flex-direction: row-reverse;
-  // }
 }
 
 .navigation {
@@ -25,6 +21,10 @@
   font-size: 14px;
   line-height: 1.15;
   letter-spacing: 0.02em;
+
+  @media screen and(max-width:$tablet) {
+    justify-content: space-between;
+  }
 }
 
 .navigation__menu {
@@ -158,27 +158,20 @@
   transition: fill 250ms $transition-effect;
 }
 
-.mobile-menu {
-  display: inline-flex;
+.mobile-button {
+  @media screen and(min-width:$tablet) {
+    display: none;
+  }
+}
+
+.burger-menu {
+  display: inline-block;
   margin: 0;
   padding: 0;
   border: none;
   background-color: transparent;
-}
 
-.mobile-menu .icon-close {
-  display: none;
-}
-
-.mobile-menu.js-open-menu .icon-close {
-  display: block;
-}
-
-.mobile-menu.js-open-menu .icon-menu {
-  display: none;
-}
-.icon-close {
-}
-
-.icon-menu {
+  @media screen and(min-width:$tablet) {
+    display: none;
+  }
 }
