@@ -87,7 +87,9 @@
 }
 
 .project__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-decoration: none;
   transition: box-shadow 250ms $transition-effect;
 
@@ -188,6 +190,7 @@
 
 .produkts {
   padding: 20px 24px;
+  flex-grow: 1;
   border-right: 1px solid $color-portfolio;
   border-bottom: 1px solid $color-portfolio;
   border-left: 1px solid $color-portfolio;
