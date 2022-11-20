@@ -1,12 +1,22 @@
 .team {
-  padding-left: 0;
-  margin: 0;
-  padding-left: 0;
-  list-style-type: none;
-
-  @media screen and (min-width: $tablet) {
+  @media screen and (max-width: 767px) {
+    display: block;
+    padding-left: 0;
+  }
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    margin: 0;
+    padding-left: 0;
+    gap: 30px;
+  }
+
+  @media screen and(min-width:$desktop) {
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding-left: 0;
   }
 }
 
@@ -34,59 +44,43 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
-  @media screen and(min-width:$desktop) {
-    width: calc(100% / 4 - 30px / 4 * 3);
-    height: 428px;
-
-    &:nth-child(-n + 3) {
-      margin-right: 30px;
-    }
-  }
-
-  &:not(:last-child) {
-    margin-bottom: 30px;
-
-    @media screen and(min-width:$tablet) {
-      margin-bottom: 0;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
     }
   }
 }
-
-.team__element > img {
+.team__image {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 .team__specialists {
-  padding: 30px 122px 24px 122px;
-
-  @media screen and (min-width: $tablet) {
-    padding: 30px 74px 24px 74px;
-  }
+  padding: 30px 30px 24px 30px;
 
   @media screen and (min-width: $desktop) {
-    padding: 30px 32px 30px 32px;
+    padding: 30px;
   }
 }
 
 .team__name {
+  display: block;
+  margin-bottom: 10px;
   color: $color-title;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
-  letter-spacing: 0.03em;
   text-align: center;
-  margin: 0;
-  margin-bottom: 10px;
 }
 
 .team__text {
-  color: $color-text;
-  font-weight: 400;
+  display: block;
+  margin-bottom: 16px;
   font-size: 16px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
+  line-height: 1.19;
   text-align: center;
-  margin: 0;
+  color: $color-text;
 }
 
 .socials {
@@ -94,21 +88,22 @@
   justify-content: center;
   gap: 10px;
   padding: 0;
-  margin-top: 16px;
-  list-style-type: none;
 }
 
 .socials__item {
-  width: calc(100% / 4 - 10px / 4 * 3);
-  height: 44px;
+  @media screen and (max-width: $mobile) {
+    display: block;
+    margin-top: 16px;
+    margin-right: 10px;
+  }
 }
 
 .socials__link {
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   transition: background-color 250ms $transition-effect;
 

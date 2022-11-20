@@ -93,6 +93,11 @@
     letter-spacing: 0.02em;
     color: $color-accent;
     text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $color-text;
+    }
   }
 
   &__mail {
@@ -102,10 +107,15 @@
     letter-spacing: 0.02em;
     color: $color-text;
     text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
+    }
   }
 }
 
-.socials {
+.socials-mobile {
   display: flex;
   padding: 0;
   margin: 0;
@@ -118,6 +128,11 @@
     letter-spacing: 0.02em;
     text-decoration: none;
     color: $color-accent;
+
+    &:hover,
+    &:focus {
+      color: $color-text;
+    }
   }
 
   &__line {

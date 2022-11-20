@@ -1,14 +1,21 @@
 .header-logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.15;
   text-decoration: none;
   letter-spacing: 0.03em;
   padding: 25px 0;
-  margin-right: 93px;
 
-  @media  screen and(min-width:$mobile) and (max-width:$tablet) {
+  @media screen and (min-width: 768px) {
+    margin-right: 87px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 93px;
+    font-size: 26px;
+    line-height: 1.2;
+  }
+  @media screen and(min-width:$mobile) and (max-width: $tablet) {
     padding: 16px 0;
     margin: 0;
   }

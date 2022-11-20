@@ -84,20 +84,35 @@
 }
 
 .contacts {
-  display: none;
-  align-items: center;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0;
-  list-style-type: none;
-
+  @media screen and(max-width: 767px) {
+    display: none;
+  }
   @media screen and(min-width: $tablet) {
+    display: block;
+    margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-top: 21px;
+  }
+
+  @media screen and(min-width: $desktop) {
     display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
   }
 }
 
 .contacts__checklist {
-  margin-left: 50px;
+  @media screen and(max-width: $desktop) {
+    margin-bottom: 10px;
+  }
+
+  @media screen and(min-width: $desktop) {
+    margin-left: 50px;
+  }
 
   &:first-child {
     margin-left: 0;
@@ -105,17 +120,21 @@
 }
 
 .contacts__mail {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: $color-text;
-  padding: 0;
-  padding: 32px 0;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.15;
   letter-spacing: 0.02em;
+  padding: 0;
+
+  color: $color-text;
+  text-decoration: none;
   transition: color 250ms $transition-effect;
+
+  @media screen and(min-width:$desktop) {
+    display: flex;
+    align-items: center;
+    padding: 32px 0;
+  }
 
   &:hover,
   &:focus {
@@ -129,17 +148,21 @@
 }
 
 .contacts__tel {
-  color: $color-text;
-  padding: 32px 0;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  margin: 0;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.15;
   letter-spacing: 0.02em;
+  color: $color-text;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
   transition: color 250ms $transition-effect;
+
+  @media screen and(min-width:$desktop) {
+    display: flex;
+    align-items: center;
+    padding: 32px 0;
+  }
 
   &:hover,
   &:focus {
