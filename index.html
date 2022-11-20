@@ -125,17 +125,50 @@
           <h2 class="section__title">Чим ми займаємося</h2>
           <ul class="produce">
             <li class="produce__element">
-              <img src="./images/box1.jpg" alt="Написання коду" width="370" />
+              <picture>
+                <source
+                  srcset="./images/desktop@1x.webp 1x, ./images/desktop@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/desktop@1x.jpg 1x, ./images/desktop@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+
+                <img src="./images/desktop@1x.jpg" alt="Десктопні додатки" />
+              </picture>
               <span class="produce__text">Десктопні додатки</span>
             </li>
 
             <li class="produce__element">
-              <img src="./images/box2.jpg" alt="Дизайн додатків" width="370" />
+              <picture>
+                <source
+                  srcset="./images/mobile@1x.webp 1x, ./images/mobile@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/mobile@1x.jpg 1x, ./images/mobile@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+
+                <img src="./images/mobile@1x.jpg" alt="Мобільні додатки" />
+              </picture>
               <span class="produce__text">Мобілні додатки</span>
             </li>
 
             <li class="produce__element">
-              <img src="./images/box3.jpg" alt="Тестування додатків" width="370" />
+              <picture>
+                <source
+                  srcset="./images/design@1x.webp 1x, ./images/design@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/design@1x.jpg 1x, ./images/design@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+
+                <img src="./images/design@1x.jpg" alt="Дизайнерські рішення" />
+              </picture>
               <span class="produce__text">Дизайнерські рішення</span>
             </li>
           </ul>
