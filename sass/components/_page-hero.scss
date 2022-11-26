@@ -11,6 +11,11 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media screen and(min-width:$mobile) {
+    max-width: 480px;
+  }
+
   @media screen and (min-width: $desktop) {
     height: 600px;
     padding: 200px 0;
@@ -28,6 +33,7 @@
 
 @media screen and (min-width: $tablet) {
   .hero {
+    max-width: 768px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url('../images/background-tablet@1x.jpg');
   }
@@ -44,6 +50,7 @@
 
 @media screen and (min-width: $desktop) {
   .hero {
+    max-width: 1600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url('../images/background-image@1x.jpg');
   }
